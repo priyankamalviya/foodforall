@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Nightly - Forms and Buttons</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- jQueryMobileCSS - styling-->
+		<link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
+		
+		<!-- jQueryMobile icons -->
+		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+
+		<!-- jQueryMobile core CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		
+		<!-- NIGHTLY style -->
+		<link rel="stylesheet" href="css/nightly.css" />
+		
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<!-- Load Font Awesome Icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		
+		<!-- jQueryMobile -->
+		<script src="js/jquery.mobile.min.js"></script>
+		
+		<!-- NIGHTLY JS -->
+		<script src="js/nightly.js"></script>
+
+    </head>
+    <body>
+    
+        <div data-role="page" data-theme='d'>
+        
+  				<div data-role="panel" data-display="push" id="sidebar" data-theme="a">
+              <ul data-role="listview">
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">Homepage Styles</a>
+                      <ul data-role="listview" class="sub-menu">
+                      	<li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="index-alternative.html">Home Alt</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="index-alt-right.html">Right Sidebar</a></li>
+                      </ul>
+                  </li>
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">Precoded Pages</a>
+                      <ul data-role="listview" class="sub-menu">
+                      	<li data-icon='false'><a data-ajax="false" href="about.html">About us</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="blog.html">Blog</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="blog-thumbnails.html">Excerpts with Thumbnails</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="works.html">Works</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="contact.php">Contact form</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">HTML Examples</a>
+                      <ul data-role="listview" class="sub-menu">
+                      	<li data-icon='false'><a href="text.html" data-ajax="false">Text</a></li>
+                      	<li data-icon='false'><a href="forms.html" data-ajax="false">Forms</a></li>
+                      	<li data-icon='false'><a href="panels.html" data-ajax="false">Sidebars</a></li>
+                      	<li data-icon='false'><a href="tables.html" data-ajax="false">Tables</a></li>
+                      	<li data-icon='false'><a href="boxes.html" data-ajax="false">Boxes</a></li>
+                      	<li data-icon='false'><a href="back.html" data-ajax="false">Back button</a></li>
+                      	<li data-icon='false'><a href="listview.html" data-ajax="false">Listview</a></li>
+                      	<li data-icon='false'><a href="dialogs.html" data-ajax="false">Dialogs</a></li>
+                      	<li data-icon='false'><a href="footer.html" data-ajax="false">Footer</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">jQuery Extensions</a>
+                      <ul data-role="listview" class="sub-menu">
+                      	<li data-icon='false'><a href="location.html" data-ajax="false">GPS Tracking</a></li>
+                      	<li data-icon='false'><a href="slider.html" data-ajax="false">Owl Slider</a></li>
+                      	<li data-icon='false'><a href="iscroll.html" data-ajax="false">iScroll 5</a></li>
+                      	<li data-icon='false'><a href="devices.html" data-ajax="false">Device Detection</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">Developers Extra</a>
+                      <ul data-role="listview" class="sub-menu">
+                      	<li data-icon='false'><a data-ajax="false" href="getting-started.html">Getting started</a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="version.html">Changelog<span class="menu-mark">1</span></a></li>
+                      	<li data-icon='false'><a data-ajax="false" href="_.html">Plain Page</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li data-icon='false' class="menu-item-has-children"><a href="#">New in 3.1</a>
+                      <ul data-role="listview" class="sub-menu">
+                        <li data-icon='false'><a data-ajax="false" href="blog-thumbnails.html">Blog Excerpts</a></li>
+                        <li data-icon='false'><a data-ajax="false" href="article.html">Single article</a></li>
+                        <li data-icon='false'><a data-ajax="false" href="index.html">Sidebar widgets</a></li>
+                        <li data-icon='false'><a data-ajax="false" href="index.html">Fixed infobars</a></li>
+                      </ul>
+                  </li>
+                  <li data-icon='false'><a data-ajax="false" href="../daisy/index.html">Daisy</a></li>
+              </ul>
+          </div>
+          
+          <div data-role="panel" data-display="push" id="sidebar-right" data-position="right" data-theme="d" class="theme-a">
+             
+            <aside class="widget">
+                <form role="search" method="get" id="searchform" class="nightly-searchform fullwidth align-center">
+                  <input data-role="none" class="nightly-input" type="text" name="s" id="s" placeholder="Find on website..." value=""/>
+                  <input data-role="none" class="nightly-button" type="submit" name="submit" value="" />
+              	</form>
+          	</aside>
+          	
+          	<aside id="recent-posts-2" class="widget">
+          		<h4 class="sidebar-title">Recent Posts</h4>
+          		<ul>
+          			<li><a href="article.html">Wonderful sight at the city during the night</a></li>
+          			<li><a href="article.html">On a Sunday walk in the forest</a></li>
+          			<li><a href="article.html">Art showcase with amazing gallery post format</a></li>
+          			<li><a href="article.html">Ready for work (image post format)</a></li>
+          			<li><a href="article.html">Imagine Dragons video post format</a></li>
+          		</ul>
+          	</aside>
+          	
+          	<aside id="recent-posts-2" class="widget">
+          		<h4 class="sidebar-title">Categories</h4>
+          		<ul>
+          			<li><a href="article.html">Artti</a></li>
+          			<li><a href="article.html">Khavi</a></li>
+          			<li><a href="article.html">Interview</a></li>
+          			<li><a href="article.html">Photography</a></li>
+          			<li><a href="article.html">Projekti</a></li>
+          		</ul>
+          	</aside>
+          	
+          	<aside id="recent-posts-2" class="widget">
+          		<h4 class="sidebar-title">Custom menu</h4>
+          		<ul>
+          			<li><a href="tel:000000000">Call button</a></li>
+          			<li><a href="contact.php">Get in touch</a></li>
+          			<li><a href="mailto:email@email.com">Mail us</a></li>
+          		</ul>
+          	</aside>
+          	
+          	<aside id="recent-posts-2" class="widget">
+          		<h4 class="sidebar-title">Text widget</h4>
+          		<div class="textwidget">Fully widgetized sidebar. This is example of text widget.</div>
+          	</aside>
+          	
+          	<aside id="recent-posts-2" class="widget">
+          		<h4 class="sidebar-title">Custom menu</h4>
+          		<div class="textwidget">
+          			<ul class="panel-share">
+              	       <li><a href="#"><i class="fa fa-behance fa-fw"></i></a></li>
+              	       <li><a href="#"><i class="fa fa-dribbble fa-fw"></i></a></li>
+              	       <li><a href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+              	       <li><a href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+              	       <li><a href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
+          		 	</ul>
+          		</div>
+          	</aside>
+          	
+          </div> <!-- #right-sidebar -->
+          
+     			<div data-role="header" data-position="fixed" data-border="false" class="header-info-bar" data-tap-toggle="false">
+     				<div data-role="navbar">
+     			   	<ul>
+         			    <li><a href="tel:123456789"><i class="fa fa-phone fa-fw"></i><span>123456789</span></a></li>
+         			    <li><a href="#"><i class="fa fa-user fa-fw"></i><span>Sign in</span></a></li>
+         			    <li><a href="#"><i class="fa fa-desktop fa-fw"></i><span>Desktop</span></a></li>
+         			    <li><a href="https://www.facebook.com/lukepostulka"><i class="fa fa-facebook fa-fw"></i><span>Facebook</span></a></li>
+         			    <li><a href="https://twitter.com/lukepostulka"><i class="fa fa-twitter fa-fw"></i><span>Twitter</span></a></li>
+     			   	</ul>
+     				 </div>
+     			</div>
+  
+          <div data-role="header" data-tap-toggle="false" data-theme='a'>
+              <a href='#sidebar' data-role="none"><img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" /></a>
+              <h1 class="header-title">Nightly</h1>
+              <a href='#sidebar-right' data-role="none" id="a-right-sidebar"><img src="images/right-menu-icon.png" alt="sidebar" id="header-search-icon" /></a>
+          </div>
+            
+            <div data-role="content">
+            
+                <ul data-role="listview">
+                    <li data-role="list-divider">Input data examples</li>
+                    <li data-role="fieldcontain">
+                        <label>Text:</label>
+                        <input data-corners="false" type="text" value="" data-clear-btn="true" placeholder="Type text...">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Date:</label>
+                        <input data-corners="false" type="date" value="" data-clear-btn="true" placeholder="01.01.2000">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Color:</label>
+                        <input data-corners="false" type="color" value="" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Datetime:</label>
+                        <input data-corners="false" type="datetime" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Email:</label>
+                        <input data-corners="false" type="email" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Month:</label>
+                        <input data-corners="false" type="month" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Time:</label>
+                        <input data-corners="false" type="time" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>URL:</label>
+                        <input data-corners="false" type="url" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Week:</label>
+                        <input data-corners="false" type="week" value="" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Textarea:</label>
+                    <textarea data-corners="false" cols="40" rows="5" placeholder="Texarea"></textarea>
+                    </li>
+                </ul>
+                <p><a data-role="none" href="#popup1" data-rel="popup" data-transition="pop">Show source</a>
+                <div data-role="popup" id="popup1" data-shadow="false">
+                    <code>&lt;input data-corners="false" type="text/date/color/datetime/email/month/time/url/week" value="" data-clear-btn="true" placeholder="Type text..."></code>
+                </div></p>
+                
+                <a href="#" class="ui-btn">Fullwidth anchor button</a>
+                <button class="ui-btn">Fullwidth button</button>
+                <button class="ui-btn ui-btn-b">Fullwidth button alt</button>
+                <p><a data-role="none" href="#popup2" data-rel="popup" data-transition="pop">Show source</a>
+                <div data-role="popup" id="popup2" data-shadow="false">
+                    <pre>&lt;a href="#" class="ui-btn">Fullwidth anchor button&lt;/a>
+&lt;button class="ui-btn">Fullwidth button&lt;/button>
+&lt;button class="ui-btn ui-btn-b">Fullwidth button alt&lt;/button></pre>
+                </div></p>
+                             
+                <a href="#" class="ui-btn ui-btn-inline">Anchor button</a>
+                <button class="ui-btn ui-btn-inline">Regular button</button>
+                <button class="ui-btn ui-btn-b ui-btn-inline">Regular button alt</button>
+                <p><a data-role="none" href="#popup3" data-rel="popup" data-transition="pop">Show source</a>
+                <div data-role="popup" id="popup3" data-shadow="false">
+                    <pre>&lt;a href="#" class="ui-btn ui-btn-inline">Anchor button&lt;/a>
+&lt;button class="ui-btn ui-btn-inline">Regular button&lt;/button>
+&lt;button class="ui-btn ui-btn-b ui-btn-inline">Regular button alt&lt;/button></pre>
+                </div></p>
+                
+                <ul data-role="listview">
+                    <li data-role="list-divider">Switches and sliders</li>
+                    <li data-role="fieldcontain">
+                        <label>Flip switch:</label>
+                        <select data-role="flipswitch" data-corners="false" data-mini="true">
+                            <option value="off">Off</option>
+                            <option value="on">On</option>
+                        </select>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label>Slider:</label>
+                        <input type="range" value="0" min="0" max="100" data-highlight="true" data-corners="false">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <div data-role='rangeslider' data-corners="false">
+                            <label>RangeSlider:</label>
+                            <input type='range' min='0' max='100' value='40'>
+                            <input type='range' min='0' max='100' value='80'>
+                        </div>
+                    </li>                    
+                    <li data-role="list-divider">Selects</li>
+                    <li data-role="fieldcontain">
+                        <label>Select</label>
+                        <select data-native-menu="true" data-corners="false" data-mini="true">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                            <legend>Checkboxes</legend>
+                            <input type="checkbox" id="ch1" checked="">
+                            <label for="ch1">One</label>
+                            <input type="checkbox" id="ch2">
+                            <label for="ch2">Two</label>
+                            <input type="checkbox" id="ch3">
+                            <label for="ch3">Three</label>
+                        </fieldset>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" data-corners="false">
+                            <legend>Checkboxes</legend>
+                            <input type="checkbox" id="ch4" checked="">
+                            <label for="ch4">One</label>
+                            <input type="checkbox" id="ch5">
+                            <label for="ch5">Two</label>
+                            <input type="checkbox" id="ch6">
+                            <label for="ch6">Three</label>
+                        </fieldset>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                            <legend>Checkboxes</legend>
+                            <input type="checkbox" id="ch4" checked="">
+                            <label for="ch4">One</label>
+                            <input type="checkbox" id="ch5">
+                            <label for="ch5">Two</label>
+                            <input type="checkbox" id="ch6">
+                            <label for="ch6">Three</label>
+                        </fieldset>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                            <legend>Radio Buttons</legend>
+                            <input type="radio" id="radio1" name="radio1" checked="checked">
+                            <label for="radio1">One</label>
+                            <input type="radio" id="radio2" name="radio1">
+                            <label for="radio2">Two</label>
+                            <input type="radio" id="radio3" name="radio1">
+                            <label for="radio3">Three</label>
+                        </fieldset>
+                    </li>
+                    <li data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" data-corners="false">
+                            <legend>Radio Buttons</legend>
+                            <input type="radio" name="radio2" id="radio4" checked="checked">
+                            <label for="radio4">Only</label>
+                            <input type="radio" name="radio2" id="radio5"> 
+                            <label for="radio5">One</label>
+                            <input type="radio" name="radio2" id="radio6">
+                            <label for="radio6">Selected</label>
+                        </fieldset>
+                    </li>
+                </ul>
+                
+                <h2>NIGHTLY Buttons</h2>
+                <p>jQuery Mobile uses own styled buttons so do we! NIGHTLY comes with dozens styled elements such as buttons, tables, form, pricing tables etc.</p>
+                <h3>Regular buttons</h3>
+                <button data-role="none" class="nightly-button">Order now</button>&nbsp;
+                <button data-role="none" class="nightly-button" data-theme="a">Hire me</button>&nbsp;
+                <button data-role="none" class="nightly-button" data-theme="b">Subscribe</button>
+                <h3>Buttons with icon</h3>
+                <button data-role="none" class="nightly-button"><i class="fa fa-shopping-cart"></i>Buy me</button>&nbsp;
+                <button data-role="none" class="nightly-button" data-theme="a"><i class="fa fa-user"></i>Log in</button>&nbsp;
+                <button data-role="none" class="nightly-button" data-theme="b"><i class="fa fa-sign-in"></i>Sign in</button>
+                <p><em>NIGHTLY uses Font Awesome icons.</em>
+<p><a data-role="none" href="#popup4" data-rel="popup" data-transition="pop">Show source</a>
+                <div data-role="popup" id="popup4" data-shadow="false">
+                    <pre>&lt;button data-role="none" class="nightly-button">Order now&lt;/button>
+&lt;button data-role="none" class="nightly-button" data-theme="d">Hire me&lt;/button>
+&lt;button data-role="none" class="nightly-button">&lt;i class="fa fa-shopping-cart">&lt;/i>Buy me&lt;/button>&nbsp</pre>
+                </div></p>
+                
+                <h2>NIGHTLY Inputs</h2>
+                <input data-role="none" type="text" class="nightly-input" placeholder="Default" />
+                <input data-role="none" type="password" class="nightly-input" data-theme="a" placeholder="Theme A" />
+                <textarea data-role="none" class="nightly-input" data-theme="b" cols="40" rows="3" placeholder="Theme B (textarea)"></textarea>
+
+<p><a data-role="none" href="#popup4" data-rel="popup" data-transition="pop">Show source</a>
+                <div data-role="popup" id="popup4" data-shadow="false">
+                    <pre>&lt;button data-role="none" class="nightly-button">Order now&lt;/button>
+&lt;button data-role="none" class="nightly-button" data-theme="a">Hire me&lt;/button>
+&lt;button data-role="none" class="nightly-button">&lt;i class="fa fa-shopping-cart">&lt;/i>Buy me&lt;/button>&nbsp</pre>
+                </div></p>
+                
+            </div>
+            
+            <div data-role="footer" data-theme="d" data-border="false">
+                <p data-inset="true">NIGHTLY 2015. All rights reserved.</p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

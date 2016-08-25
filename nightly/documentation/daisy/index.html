@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Luke Postulka, http://lukepostulka.net">
+
+	<title>Documentation | Nightly+Daisy</title>
+
+    <!-- [loading stylesheets] -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!-- [loading scripts] -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+
+    <section id="page">
+
+    	<div id="screen-01" class="screen">
+				<h1>Nightly+DAISY<span class="small-title">documentation</span></h1>
+    	</div><!-- #01 -->
+    	
+    	<div class="screen">
+    		<h2>Thank you</h2>
+    		
+    		<div class="wrapper">
+    			<p>I would like to thank you for purchasing one of my themes. If you have any questions that are beyond the scope of this documentation, please feel free to contact me via <a href="mailto:support@lukepostulka.net">email</a> or using the <a href="http://support.lukepostulka.net">support forum</a>.</p>
+    			<p><a href="http://support.lukepostulka.net"><button>Support Forum</button></a></p>
+    			<p><a href="http://themeforest.net/user/lukepostulka/follow"><button>Follow me on ThemeForest</button></a></p>
+    		</div>
+    	</div><!-- #01 -->
+
+        <div id="screen-02" class="screen">
+					<h2>Table of contents</h2>
+            <div class="wrapper">
+            	<ul>
+            			<li>0. <a href="#screen-0">Nightly+Daisy</a>
+            				<ul>
+            			    	<li>0.1. <a href="#screen-0.1">Information</a></li>
+            			   </ul>
+            			</li>
+                	<li>1. <a href="#screen-1">HTML</a>
+                    	<ul>
+                        	<li>1.1. <a href="#screen-1.1">Page structure</a></li>
+                        	<li>1.2. <a href="#screen-1.2">jQuery Mobile</a>
+                        	<ul><li>1.2.1. <a href="#screen-1.2.1">Data variables</a></li></ul></li>
+                            
+                        </ul>
+                    </li>
+                    <li>2. <a href="#screen-2">CSS</a>
+                    	<ul>
+                        	<li>2.1. <a href="#screen-2.1">Main CSS files</a></li>
+                        	<li>2.2. <a href="#screen-2.2">Other CSS files</a></li>
+                        	<li>2.3. <a href="#screen-2.3">CSS structure</a></li>
+                        	<li>2.4. <a href="#screen-2.4">Fonts</a></li>
+                        	<li>2.5. <a href="#screen-2.5">Font Awesome icons</a></li>
+                        </ul>
+                    </li>
+                    <li>3. <a href="#screen-3">luke.css</a>
+                    	<ul>
+                            <li>3.1. <a href="#screen-3.1">Styling</a></li>
+                            <li>3.2. <a href="#screen-3.2">List of available elements</a></li>
+                        </ul>
+                    </li>
+
+                    <li>4. <a href="#screen-4">Customizing theme</a>
+                    	<ul>
+                        	<li>4.1. <a href="#screen-4.1">Color themes</a></li>
+                            <li>4.2. <a href="#screen-4.2">Using own colors</a>
+                            <ul><li>4.2.1. <a href="#screen-4.2.1">1. step ThemeRoller</a></li>
+                            <li>4.2.2. <a href="#screen-4.2.2">2. step CSS changes</a></li></ul></li>
+                            <li>4.3. <a href="#screen-4.3">Sidebars</a>
+                            <ul><li>4.3.1. <a href="#screen-4.3.1">3D Transitions</a></li></ul></li>
+                        </ul>
+                    </li>
+
+                    <li>5. <a href="#screen-5">jQuery</a>
+                    	<ul>
+                        	<li>5.1. <a href="#screen-5.1">JS files</a></li>
+                        	<li>5.2. <a href="#screen-5.2">Swipe</a></li>
+                          <li>5.3. <a href="#screen-5.3">Device Detection</a></li>
+                          <li>5.4. <a href="#screen-5.4">GPS Tracking</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>6. <a href="#screen-6">In addition to</a>
+                    	<ul>
+                        	<li>6.1. <a href="#screen-6.1">Making APPS with Nightly+Daisy</a></li>
+                        	<li>6.2. <a href="#screen-6.2">Support for templates</a></li>
+                          <li>6.3. <a href="#screen-6.3">Free updates</a></li>
+                        </ul>
+                    </li>
+
+                    <li>7. <a href="#screen-7">Credits</a>
+                    	<ul>
+                        	<li>7.1. <a href="#screen-7.1">Sources</a></li>
+                        	<li>7.2. <a href="#screen-7.2">Epilogue</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+    	</div><!-- #02 -->
+
+        <!-- -TABLE OF CONTENTS- -->
+        
+         <div id="screen-0" class="screen">
+        			<h1>Daisy</h1>
+            	</div><!-- #1 -->
+        
+                <div id="screen-0.1" class="screen">
+        			<h2>Information</h2>
+                    <div class="wrapper">
+                    	<p>This documentation is covering Nightly and Daisy, both standalone templates meaning you recieved two templates for one price.</p>
+                    	<p>Daisy is a HTML5 template that uses latest CSS and jQuery advantages to create modern developing platform, that saves <strong>time, money and increases customers' satisfaction.</strong> As a coder it may be hard to use someone else's template but thanks to jQuery Mobile, Daisy is highly intuitive. You will find only syntax you are familiar with or can easily find proper function in extensive jQuery Mobile docs – thus making it easier and more enjoyable to work on your projects. Daisy is freely based on Nightly, sharing certain functionalities and syntaxes.</p>
+                    	</div>
+            	</div><!-- #0.1 -->
+
+        <div id="screen-1" class="screen">
+			<h1>HTML</h1>
+    	</div><!-- #1 -->
+
+        <div id="screen-1.1" class="screen">
+			<h2>Page structure</h2>
+            <div class="wrapper">
+            <p>Both templates work with jQuery Mobile version 1.4 and above. If you want to use this template with all it's functions and features you will have to follow simple HTML layout.</p>
+            
+            Keep in mind that there are certain libraries that must be included within &lt;head> selection. Basic header that can be used with all necessary plugins looks like this:</p>
+            
+            <pre>&#x3C;head&#x3E;
+        &#x3C;title&#x3E;[page title]&#x3C;/title&#x3E;
+        &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22; /&#x3E;
+ 
+        &#x3C;!-- jQueryMobileCSS - styling--&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/jqeury.mobile.theme.min.css&#x22; /&#x3E;
+ 
+        &#x3C;!-- jQueryMobile icons --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/jquery.mobile.icons.min.css&#x22; /&#x3E;
+ 
+        &#x3C;!-- jQueryMobile core CSS --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/jquery.mobile.min.css&#x22; /&#x3E;
+       
+        &#x3C;!-- Fonts --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/fonts.css&#x22; /&#x3E;
+        
+        &#x3C;!-- Main CSS styles --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/style.css&#x22; /&#x3E;
+        
+        &#x3C;!-- Luke CSS styles --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/luke.css&#x22; /&#x3E;
+ 
+        &#x3C;!-- Load Font Awesome Icons --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/font-awesome.min.css&#x22;&#x3E;
+ 
+        &#x3C;!-- jQuery --&#x3E;
+        &#x3C;script src=&#x22;js/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+        
+        &#x3C;!-- jQuery Mobile Scripts --&#x3E;
+        &#x3C;script src=&#x22;js/jquery.mobile.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    		
+        &#x3C;!-- Main Scripts --&#x3E;
+        &#x3C;script src=&#x22;js/scripts.js&#x22;&#x3E;&#x3C;/script&#x3E;
+ 
+&#x3C;/head&#x3E;</pre>
+
+							<p>The HTML <body> layout is the same throughout the template. Here's the general structure:</p>
+							<pre>&#x3C;body&#x3E;
+    &#x3C;div data-role=&#x22;page&#x22;&#x3E; 
+        &#x3C;div data-role=&#x22;panel&#x22; data-display=&#x22;push&#x22; id=&#x22;sidebar&#x22; data-theme=&#x22;a&#x22;&#x3E;&#x3C;/div&#x3E;
+        &#x3C;div data-role=&#x22;header&#x22; data-theme=&#x22;a&#x22;&#x3E;&#x3C;/div&#x3E;   
+        &#x3C;div data-role=&#x22;content&#x22;&#x3E;&#x3C;/div&#x3E;
+        &#x3C;div data-role=&#x22;footer&#x22; data-inner=&#x22;true&#x22; data-border=&#x22;false&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/body&#x3E;</pre>
+            
+            </div>
+    	</div><!-- #1.1 -->
+
+        <div id="screen-1.2" class="screen">
+			<h2>jQuery Mobile</h2>
+            <div class="wrapper">
+                <blockquote>jQuery Mobile is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</blockquote>
+                <img src="img/jquerydaisy.png" />
+                <p>The jQuery Mobile serves as the core of the template providing all the great jQM features (like grids, responsiveness, mobile browsers support, libraries, functions, and much more) with the template on the top providing the brilliant GUI and exquisite user experience.</p>
+            </div>
+    	</div><!-- #1.2 -->
+    	
+    	<div id="screen-1.2.1" class="screen">
+    		<h2>Data Variables</h2>
+    	    <div class="wrapper">
+    	    		<p>The jQuery Mobile framework uses HTML5 <code>data-</code> attributes to allow for markup-based initialization and configuration of widgets.</p>
+    	        <p>Nightly and Daisy inherited <code>data-</code> variables and uses them quite extensively. Proper usage of data variables can be found in jQuery Mobile Docs. However it's very simple and saves you a lot of work. Proper use of data variables looks like this:</p>
+    	        <pre>&lt;button data-role=&quot;button&quot; data-theme=&quot;a&quot; data-corners=&quot;false&quot;&gt;Test button&lt;/button&gt;</pre>
+    	        <p>There are many data variables available. Worry not, you will probably never use 90% of them. But there are few worth remembering as they are used very often in the template:</p>
+    	        <pre>data-role [role]     (apply jQuery Mobile native role)
+data-theme[theme-code (a/b/c/d/e)]        (changes color scheme)
+data-ajax[true/false]    (turns on/off AJAX page loading)
+data-border[true/false]  (adds/removes border from element)
+data-corners[false] (removes rounded corners)
+data-shadow[false]  (removes shadows)
+data-inner[true/false]  (true: adds extra padding and margin / false: adds margin only)</pre>
+<p>jQuery Mobile official article covering this subject:<pre>http://api.jquerymobile.com/data-attribute/</pre></p>
+    	    </div>
+    	</div><!-- #1.2.1 -->
+
+        <!-- -INSTALLATION- -->
+
+        <div id="screen-2" class="screen">
+            <h1>CSS</h1>
+        </div><!-- #2 -->
+
+        <div id="screen-2.1" class="screen">
+				<h2>Main CSS Files</h2>
+            <div class="wrapper">
+            	<ol>
+            		<li><b>font-awesome.min.css</b> — Font Awesome icons CSS</li>
+            		<li><b>fonts.css</b> — Fonts import</li>
+            		<li><b>jqeury.mobile.theme.min.css</b> — jQM theme (use with ThemeRoller)</li>
+            		<li><b>jquery.mobile.icons.min.css</b> — jQM icons</li>
+            		<li><b>jquery.mobile.min.css</b> — jQM structure</li>
+            		<li><b>luke.css</b> — Luke classes import</li>
+                <li><b>style.css</b> — Main stylesheet</li>
+                </ol>
+                <p>Do not remove any of main CSS files from the template.</p>
+            </div>
+    	</div><!-- #2.1 -->
+    	
+    	<div id="screen-2.2" class="screen">
+    			<h2>Other CSS Files</h2>
+    	    <div class="wrapper">
+    	    	<ol>
+    	    		<li><b>owl.carousel.css</b> — Owl Carousel structure</li>
+    	    		<li><b>owl.theme.css</b> — Owl Carousel theme</li>
+    	    		<li><b>owl.transitions.css</b> — Owl Carousel transitions</li>
+    	        </ol>
+    	    </div>
+    	</div><!-- #2.2 -->
+    	
+    	<div id="screen-2.3" class="screen">
+    			<h2>CSS structure</h2>
+    	    <div class="wrapper">
+    	    <p>It is better to understand CSS structure in order to work successfully and efficiently with this template. CSS styles are divided into <strong>three separate part</strong>.</p>
+    	    <p>Part one <strong>jQuery Mobile default</strong> styles.</p>
+    	    <p>Part two is <strong>styles for the template</strong> in some cases overwriting default jQuery Mobile default styles located in <code>css/style.css</code></p>
+    	    <p>Third and the last part are <strong>Luke classes</strong> working like simple framework providing elementary CSS styles (for buttons, inputs, tables, typography...) located in <code>css/luke.css</code></p>
+    	    </div>
+    	</div><!-- #2.3 -->
+    	
+    	<div id="screen-2.4" class="screen">
+    			<h2>Fonts</h2>
+    	    <div class="wrapper">
+    	    	<p>This template uses webfonts located in <code>fonts/</code><br />Fonts available in this template:</p>
+    	    	<ol>
+	    	    	<li>Font Awesome</li>
+	    	    	<li>Oswald</li>
+	    	    	<li>Roboto</li>
+	    	    	<li>Source Sans Pro</li>
+    	    	</ol>
+    	    	
+    	    </div>
+    	</div><!-- #2.4 -->
+    	
+    	<div id="screen-2.5" class="screen">
+    			<h2>Font Awesome icons</h2>
+    	    <div class="wrapper">
+    	    	<blockquote>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</blockquote>
+    	    	<span>List of all icons available</span>
+    	    	<pre>http://fortawesome.github.io/Font-Awesome/cheatsheet/</pre>
+    	    	<span>Examples</span>
+    	    	<pre>http://fortawesome.github.io/Font-Awesome/examples/</pre>
+    	    	<span>Usage of Font Awesome</span>
+    	    	<pre>&lt;i class="fa fa-home">&lt;/i></pre>
+    	    	<span>If you change the font-size of the icon's container, the icon gets bigger. Same things goes for color, drop shadow, and anything else that gets inherited using CSS.</span>
+    	    </div>
+    	</div><!-- #2.5 -->
+
+        <!-- -FILE STRUCTURE- -->
+
+        <div id="screen-3" class="screen">
+            <h1>luke.css</h1>
+        </div><!-- #3 -->
+
+        <div id="screen-3.1" class="screen">
+				<h2>Styling</h2>
+            <div class="wrapper">
+            	<p>Library luke.css contains all sort of useful pre-coded elements such as forms, inputs, tables, typography and you can find them used through the whole template. The usage is really simple as is the additional styling.</p>
+            	<p>For using one of luke.css elements it's important to switch off the jQuery Mobile for the element. This is due to jQuery Mobile own styling and we don't want that. Calling <code>data-role="none"</code> disables jQuery Mobile for any given element.</p>
+            	<p>Use luke.css classes for creating requested element for example button. Class for button is <code>.luke-button</code> (you can notice that all luke.css classes starts with <code>luke-</code> Final code looks like this:</p>
+            	<pre>&lt;button data-role="none" class="luke-button">Luke button&lt;/></pre>
+            	<p>Now the result would be plan button and that is perfectly okay. Additional color themes can be used, same color themes available for the whole template. You can change color theme using <code>data-theme</code> property (same as in jQuery Mobile). If we want to create button with the color theme "a" we would use the code below:</p>
+            	<pre>&lt;button data-role="none" class="luke-button" data-theme="a">Luke button&lt;/></pre>
+            	<p>It is very, very, <strong>very</strong> simple as you can see. I was even considering if I should even write this but then I said nah I'll be fun so here we are.</p>
+               <p>Same approach can be used for any luke.css element (whole list below).</p>
+            </div>
+    	</div><!-- #3.1 -->
+
+        <div id="screen-3.2" class="screen">
+			<h2>List of available elements</h2>
+            <div class="wrapper">
+            	<ol>
+                    <li>.luke-button</li>
+                    <li>.luke-input</li>
+                    <li>.luke-circle</li>
+                    <li>.luke-text-box</li>
+                    <li>.luke-alert</li>
+                    <li>.luke-team-box</li>
+                    <li>.luke-service-box</li>
+                    <li>.luke-inline-slider</li>
+                    <li>.luke-inline-gallery</li>
+                    <li>.luke-gallery</li>
+                    <li>.luke-box</li>
+                    <li>.luke-list-navigation</li>
+                    <li>.luke-avatar</li>
+                    <li>.luke-author</li>
+                    <li>.luke-bg</li>
+                    <li>.luke-testimonials</li>
+                    <li>.luke-cute-underline</li>
+                    <li>.luke-searchform</li>
+                </ol>
+                <p>For each example see <strong>HTML examples</strong> section inside the template navigation.</p>
+            </div>
+    	</div><!-- #3.2 -->
+
+        <!-- -CUSTOMIZATION- -->
+
+        <div id="screen-4" class="screen">
+			<h1>Customizing theme</h1>
+    	</div><!-- #4 -->
+
+        <div id="screen-4.1" class="screen">
+			<h2>Color themes</h2>
+            <div class="wrapper">
+            	<blockquote>A theme (in jQuery Docs it's called swatch) is one of several color schemes provided by your theme. Template uses single-letter designations for themes (swatches). The default jQuery Mobile theme provides two swatches. In this template you will find three more.</blockquote>
+            	<p>List of themes:</p>
+            	<ol>
+            	    <li>"a" - Blue theme</li>
+            	    <li>"b" - Dark theme</li>
+            	    <li>"c" - Rather subtle blue</li>
+            	    <li>"d" - White theme</li>
+            	    <li>"e" - Yellow theme</li>
+            	</ol>
+            	<p>The ThemeRoller allows you to create any number of swatches for a custom theme.</p>
+            </div>
+    	</div><!-- #4.1 -->
+
+        <div id="screen-4.2" class="screen">
+			<h2>Using own colors</h2>
+            <div class="wrapper">
+            	<p>If you want to add/change color themes (swatches) used in the theme there is very simple way to do so.</p>
+            </div>
+    	</div><!-- #4.2 -->
+    	
+    				<div id="screen-4.2.1" class="screen">
+    					<h2>1. step ThemeRoller</h2>
+    				    <div class="wrapper">
+    				    	<p>Open ThemeRoller and import current themes library file <code>css/jquery.mobile.theme.min.css</code> after import you will see all themes available as in the theme. Now you can change/add/delete/adjust color variations for chosen themes. After finishing your work simply export your new themes library and overwrite original file.</p>
+    				    </div>
+    				</div><!-- #4.2 -->
+    				
+    				<div id="screen-4.2.2" class="screen">
+    					<h2>2. step CSS changes</h2>
+    				    <div class="wrapper">
+    				    	<p>Now after you have imported ThemeRoller file into the template you need to change color variations in the <code>style.css</code> file as well. You see ThemeRoller works with jQuery Mobile framework and don't affect any other part of the template created separately (lile luke.css elements for example).</p>
+    				      <p>Open <code>css/style.css</code> and find any <code>data-theme</code> entry and then change it according your color variations from ThemeRoller. For example:</p>
+    				      <pre>[data-role=panel][<strong>data-theme=a</strong>]{
+    background: <strong>#181b22</strong>;
+    border-right: 1px solid <strong>#181b22</strong>;
+    color: #fff;
+}</pre>
+									<p>Same approach use with file <code>css/luke.css</code> Now here just scroll down the file where you will find all theme variations listed at once just like this:</p>
+									<pre>.ui-page[data-theme=a], .luke-text-box[data-theme=a], .ui-tag[data-theme=a], .luke-bg[data-theme=a], .luke-cute-underline[data-theme=a]::after, .luke-box[data-theme=a], .luke-circle[data-theme=a], .luke-button[data-theme=a], .luke-input[data-theme=a], .ui-footer[data-theme=a] [data-role=navbar] ul li a, .highlight[data-theme=a] {
+    background: <strong>#181b22</strong>;
+    border-color: <strong>#181b22</strong> !important;
+    color: #fff;
+}</pre>
+									<p>Change colors, hit save and that's it.<br />Remember:</p>
+									<ol>
+									    <li>First import/create/edit themes in ThemeRoller, export and replace file in the CSS folder</li>
+									    <li>Then change colors in <code>style.css</code></li>
+									    <li>And then change colors in <code>luke.css</code> as well</li>
+									</ol>
+    				    </div>
+    				</div><!-- #4.2 -->
+
+        <div id="screen-4.3" class="screen">
+			<h2>Sidebars</h2>
+            <div class="wrapper">
+            	<p>Nightly and Daisy offer a few types of sidebars (or panels in jQuery Mobile language). Of course both follow official jQuery Mobile syntax for using sidebars and everything you can read in official jQuery Mobile docs applies for both templates too. Some basic informations: you can have sidebars on both sides of the screens, you can have any number of panels on one page, there is swipe feature available, there are 3 native transition styles (push/reveal/overlay) and everything you need to know about how sidebars work you can find in official jQuery Mobile docs (search for panels).</p>
+            </div>
+    	</div><!-- #4.4 -->
+    	
+    	<div id="screen-4.3.1" class="screen">
+    		<h2>3D Transitions</h2>
+    	    <div class="wrapper">
+    	    	<p>Keep in mind that any additional sidebar 3D transition isn't default jQuery Mobile transition but rather my own customization. If you want 100% compatibility use default jQuery Mobile transitions (push/overlay/reveal).</p>
+    	    </div>
+    	</div><!-- #4.4 -->
+
+
+        <!-- -POST FORMATS- -->
+
+        <div id="screen-5" class="screen">
+			<h1>jQuery</h1>
+    	</div><!-- #6 -->
+
+        <div id="screen-5.1" class="screen">
+			<h2>JS files</h2>
+            <div class="wrapper">
+            	<ol>
+            		<li><b>device.detect.js</b> — Device detection script</li>
+            		<li><b>filterable.min.js</b> — jQuery filter for works page</li>
+            		<li><b>iscroll.js</b> — iScroll plugin</li>
+            		<li><b>jquery.min.js</b> — jQuery import</li>
+            		<li><b>jquery.mobile.min.js</b> — jQuery Mobile import</li>
+            		<li><b>jquery.quicksand.js</b> — jQuery Quicksand plugin</li>
+            		<li><b>owl.carousel.min.js</b> — Owl Carousel plugin</li>
+            		<li><b>scripts.js</b> — Main scripts file</li>
+            	</ol>
+            </div>
+    	</div><!-- #5.1 -->
+
+        <div id="screen-5.2" class="screen">
+				<h2>Swipe</h2>
+            <div class="wrapper">
+            	<p>Swipe feature is available for opening/closing sidebars. The initial swipe is set to the sidebar with ID<code>#sidebar</code> what that means is that if you gave your sidebar ID <code>#sidebar</code> it will respond on swipe.</p>
+            	<p>Now there are two things you would want to do with this. Either turn off the swipe feature or add another swipe ID.</p>
+            	<p>I will now show you the swipe handler with descriptions for each line. You can find similar code in the <code>scripts.js</code> file. You don't need to be jQuery guru for editing this code because it's very simple however if you want to know how this works feel free to ask me.</p>
+            	<pre>// Sidebar swipe opening/closing
+jQuery( document ).on( "swipeleft swiperight", function( e ) { // when you swipe your finger
+	if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) { // and if panel isn't already open
+  	if ( e.type === "swipeleft"  ) { // and if the swipe is from right to left
+  		jQuery( "#sidebar-right" ).panel( "open" ); // <strong>open right sidebar with ID #right-sidebar</strong>
+    } else if ( e.type === "swiperight" ) { // if the swipe is from left to right
+    	jQuery( "#sidebar" ).panel( "open" ); // <strong>open (left) sidebar with ID #sidebar</strong>
+  	} 
+  	
+ 	}
+ });</pre>
+ 							<p>Now you probably know if you want to use your own swipe ready sidebar ID you can add another line for example <code>jQuery( "#my-awesome-sidebar" ).panel( "open" );</code> but I suggest you <strong>just use IDs given by default (#sidebar and #right-sidebar)</strong>.</p>
+            	<p>If you want to <strong>turn off the swipe</strong> feature open file <code>js/scripts.js</code> and work with the same code as above.</p>
+<pre>// Sidebar swipe opening/closing
+jQuery( document ).on( "swipeleft swiperight", function( e ) { // when you swipe your finger
+	if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) { // and if panel isn't already open
+  	if ( e.type === "swipeleft"  ) { // and if the swipe is from right to left
+  		jQuery( "#sidebar-right" ).panel( "open" ); // <strong>open right sidebar with ID #right-sidebar</strong>
+    } else if ( e.type === "swiperight" ) { // if the swipe is from left to right
+    	jQuery( "#sidebar" ).panel( "open" ); // <strong>open (left) sidebar with ID #sidebar</strong>
+  	} 
+  	
+ 	}
+ });</pre>
+ 							<p>Destroy it! Delete the whole thing.</p>
+            	<p><strong>Disable swipe caller on certain elements (for example sliders)</strong>. Add class <code>.disableswipe</code> to the element.</p>
+            </div>
+    	</div><!-- #5.2 -->
+
+      <div id="screen-5.3" class="screen">
+      		<h2>Device Detection</h2>
+            <div class="wrapper">
+            	<p>Is lightweight jQuery script located in <code>js/device.detect.js</code> which can detect which device are you using. You can work whit it as a library and it's free to use. It can detect Android, BlackBerry, iOS and last but not least Microsoft's IE. Furthermore it can tell you which Apple device are you using (iPhone, iPad or iPod).</p>
+            	<p>Importing js library in page header gives you access to following functions:</p>
+            	<pre>deviceDetect.Android(); // returns true if Android
+deviceDetect.BlackBerry(); // returns true if BlackBerry
+deviceDetect.iOS(); // returns true if iOS device
+deviceDetect.any(); // returns true if mobile device
+isRetina(); // returns true if Retina
+$(window).width(); // returns window width
+$(window).height(); // returns window height
+window.screen.width; // returns actual screen width
+window.screen.height; // returns actual screen height</pre>
+            </div>
+      	</div><!-- #5.3 -->
+      	
+      	<div id="screen-5.4" class="screen">
+      			<h2>GPS Tracking</h2>
+      	      <div class="wrapper">
+      	      	<p>Both templates comes with great feature that will make your web applications stand out! The feature is location tracking via browser for computers or GPS location tracking for mobiles. Browser's location (it will probably ask you to accept or deny the request) provides information about the latitude and longitude. Then the AJAX call to Google API retrieves the address for our geolocation.</p>
+      	      	<p>This library uses Google API so for more detailed docs use Google official help. See page <code>location.html</code> for further information. List of basic functions:</p>
+      	      	<pre>address_components[2].short_name - street name
+address_components[1].short_name - house number
+address_components[0].short_name - house number
+address_components[3].short_name - city
+address_components[7].short_name - state
+lat - GPS latitude
+lng - GPS longtitude</pre>
+      	      </div>
+      		</div><!-- #5.4 -->
+
+        <!-- -STRUCTURES- -->
+
+        <div id="screen-6" class="screen">
+			<h1>In addition to</h1>
+    	</div><!-- #6 -->
+    	
+    	<div id="screen-6.1" class="screen">
+    			<h2>Making APPS with Nightly+Daisy</h2>
+    	      <div class="wrapper">
+    	      	<p>jQuery Mobile provides compatibility with PhoneGap as well as Cordova.</p>
+							<blockquote><strong>PhoneGap</strong> is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</blockquote>
+							<blockquote><strong>Apache Cordova</strong> is a set of device APIs that allow a mobile app developer to access native device function such as the camera or accelerometer from JavaScript. Combined with a UI framework such as jQuery Mobile or Dojo Mobile or Sencha Touch, this allows a smartphone app to be developed with just HTML, CSS, and JavaScript.</blockquote>
+							<p>If you are interested in creating applications with Nightly or Daisy read PhoneGap or Cordova official website and learn more.</p>
+    	      </div>
+    		</div><!-- #6.1 -->
+    		
+    		<div id="screen-6.2" class="screen">
+    				<h2>Support for templates</h2>
+    		      <div class="wrapper">
+    		      	<p>Support is available for all of my customers at <a href="http://support.lukepostulka.net">support.lukepostulka.net</a></p>
+    		      	<p>You have to register to see or start a topic. You will need your purchase code in order to register your account. For purchase code open ThemeForest > Downloads. Click on License certificate & purchase code. Open the .txt file and locate your unique purchase code.</p>
+    		      	<p>Please note that support provided covers matters related to the template and the template only.</p>
+    		      	<p>Support <strong>includes</strong></p>
+    		      	<ol>
+    		      		<li>Responding to questions or problems regarding your item and its features</li>
+    		      		<li>Fixing bugs and reported issues</li>
+    		      		<li>Providing updates to ensure compatibility with new software versions</li>
+    		      	</ol>
+    		      	<p>Support <strong>does not include</strong></p>
+    		      	<ol>
+    		      		<li>Customization and installation services</li>
+    		      		<li>Support for third party software and plug-ins</li>
+    		      	</ol>
+    		      	
+    		      </div>
+    			</div><!-- #6.2 -->
+    			
+    			<div id="screen-6.3" class="screen">
+    					<h2>Free updates</h2>
+    			      <div class="wrapper">
+    			      	<p>Over time there will be updates released. It will be announced in the email and the item page. I suggest you to always follow the latest versions of the template. If you want to check which version you currently have open <code>version.html</code> and compare it with current version released on ThemeForest.</p>
+    			      </div>
+    				</div><!-- #6.3 -->
+    				
+    	<div id="screen-7" class="screen">
+    		<h1>Credits</h1>
+    	</div><!-- #6 -->
+
+      	<div id="screen-7.1" class="screen">
+      		<h2>Credits</h2>
+      	    <div class="wrapper">
+      	    <p>Third party software used in the template that I would like to give credits to:</p>
+      	    	<ol>
+      	        	<li><strong>Fonts</strong> Source Sans Pro, Oswald, Roboto</li>
+      	        	<li><strong>Icons</strong> Font Awesome</li>
+      	        	<li><strong>Images</strong> Unsplash.com</li>
+      	        	<li>jQuery and jQuery Mobile framework</li>
+      	        	<li>Owl Carousel</li>
+      	        	<li>iScroll, Filterable and Quicksand jQuery plugins</li>
+      	        </ol>
+      	        
+      	    </div>
+      	</div><!-- #7.1 -->
+      	
+      	
+      	<div id="screen-7.2" class="screen">
+      		<h2>Epilogue</h2>
+      	    <div class="wrapper">
+      	        <p>I would like to thank you for purchasing this template. If you have any further question or need help you can contact me on email or support.</p>
+      	        <p>If you are happy with this template I kindly as you to leave a rating in <code>ThemeForest > Downloads</code> It takes only a few minutes but it is extremely helpful to other customers.<br />PS: it is great reward for me too :-)</p>
+      	        <p><a href="http://support.lukepostulka.net"><button>Support Forum</button></a></p>
+      	        <p><a href="http://themeforest.net/user/lukepostulka/follow"><button>Follow me on ThemeForest</button></a></p>
+      	    </div>
+      	</div><!-- #7.2 -->
+      	   
+         
+    	<div class="wrapper">
+        	<p>Cheers,<br />Luke</p>
+        </div>
+	</section><!-- #page -->
+
+</body>
+</html>

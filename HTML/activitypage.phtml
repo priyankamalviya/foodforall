@@ -1,0 +1,96 @@
+<html>
+<?php
+session_start();
+?>
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>FightHunger</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<style type="text/css">
+body {
+    background: url(fighthunger.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+
+#signup label.error {
+
+  font-size: 0.8em;
+
+  color: #F00;
+
+  font-weight: bold;
+
+  display: block;
+
+  margin-left: 215px;
+
+}
+
+#signup  input.error, #signup select.error  {
+
+  background: #FFA9B8;
+
+  border: 1px solid red;
+
+}
+
+</style>
+
+	<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body>
+	
+		
+
+<div data-role="page" id="page1">
+
+		<div data-role="header">
+		<a href="http://localhost/295A/fighthunger.html" data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>
+		<!--<input type="button" value="logout" data-inline="true"  class="ui-btn-right" data-direction="reverse" onclick="logout();"/>-->
+<h1>WELCOME TO Activity Page </h1>
+
+<?php
+//$name = $_GET['id'] ;
+$var_value = $_SESSION['varname'];
+echo " WELCOME $var_value ";
+?>
+		
+</div>
+		<div data-role="main" class="ui-content">
+
+			    <div id="displaysignin" style="display:none;"></div>
+    <div id="displaysignup" style="display:none;"></div>
+	<div data-role="footer">
+		<h2>&copy; CMPE295A Fall'15 </h2>
+	</div>
+
+     </div>
+
+ 
+    
+</body>
+</html>

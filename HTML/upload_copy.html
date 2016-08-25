@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uploadimage</title>
+	<!-- jQueryMobileCSS - styling-->
+		<link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
+				
+		<!-- jQueryMobile icons -->
+		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+		
+		<!-- jQueryMobile core CSS -->
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		
+		<!-- Owl stylesheet -->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		
+		<!-- Owl Theme -->
+		<link rel="stylesheet" href="css/owl.theme.css">
+				
+		<!-- NIGHTLY style -->
+		<link rel="stylesheet" href="css/nightly.css" />
+				
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic|Oswald:400,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Load Font Awesome Icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		
+		<!-- jQueryMobile -->
+		<script src="js/jquery.mobile.min.js"></script>
+		
+		<!-- Owl Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		
+		<!-- NIGHTLY JS -->
+		<script src="js/nightly.js"></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.form.js"></script>
+	
+
+	<script>
+	$(document).ready(function() {
+
+	var options = {
+		beforeSubmit:  showRequest,
+		success:       showResponse,
+		url:       '../PHP/saveimage.php',  // your upload script
+		dataType:  'json'
+	};
+	$('#Form1').submit(function() {
+		$('#message').html('');
+		$(this).ajaxSubmit(options);
+		return false;
+	});
+}); 
+function showRequest(formData, jqForm, options) { //formdata is equivalent to the multipart /form-data and jqForm is a plugin which is an efficient way to submit the form data to the back end.
+	var fileToUploadValue = $('input[name=fileToUpload]').fieldValue();
+	if (!fileToUploadValue[0]) {
+		$('#message').html('Please select a file.');
+		return false;
+	} 
+	return true;
+} 
+function showResponse(data, statusText)  {
+	if (statusText == 'success') {
+		
+		if(data.status== 401)
+		{
+			$('#message').html(data.msg);
+		}
+		else
+		{
+		//$('#message').html(data.src);
+		document.getElementById("myImage").src=data.src;
+		}
+		console.log(data);
+	} else {
+		$('#message').html('Unknown error!');
+	}
+} 
+</script>
+ 	<style type="text/css">
+	.msgSize{
+		font-size:70%;
+		float: right; 
+		margin-right: 27px;
+	}
+	</style>
+</head>
+<body>
+<div data-role="page" id="uploadphoto">
+		<!--HEADER OF PAGE-->
+		<div data-role="header">
+			<h1>FightHunger</h1>
+		</div>
+		<!--BODY OF PAGE-->
+		<div data-role="main" class="ui-content">
+		<form method ="post" id="Form1" action= ""  data-ajax="false">
+		<div style="padding:10px 20px;">
+		
+		<input type="file" name="fileToUpload" id="fileToUpload" value="" placeholder="Choose your photo" data-theme="a" />
+					
+			<input type="submit" id="buttonForm" value="Submit" data-theme="b">upload</button>
+			</div>
+		</form>
+		
+		 
+		 <img id = "myImage" src="" alt="No image Selected" width="100" height="100"/> 
+
+		</div>
+		<p id="message"></p>
+		<div id="result"></div>
+		<!--FOOTER OF PAGE-->
+		<div data-role="footer" data-position="fixed">
+			<h2>&copy; CMPE295 Spring 2016</h2>
+		</div>	
+</div>
+</body>
+</html>
